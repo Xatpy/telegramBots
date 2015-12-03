@@ -9,6 +9,7 @@ TOKEN = '147485890:AAE-TljxM8kdHIeLXsUy2YPDk-mD-f6Vfks'
 
 #Referencia: https://www.youtube.com/watch?v=qXLVJponfqQ
 frasesGil = {
+    0:"And say: black, black...all day, is very bad.",
     1:"Fascineroso",
     2:"Caneda hijo de puta y ladrón",
     3:"Aúpa Atleti campeón",
@@ -20,7 +21,6 @@ frasesGil = {
     9:"Iba a fichar a un jugador importante y me he enterado que es maricón...Y digo no, a ese no le meto en el vestuario",
     10:"No hay derecho! No hay derecho! Eso es expulsión!",
     11:"Yo es que disfruto cuando pierde el Madrid...es que no lo puedo remediar",
-    12:"And say: black, black...all day, is very bad."
 }
 
 frasesCallejeros = {
@@ -37,7 +37,8 @@ def getFrases(tipo):
         frases = frasesGil
     elif tipo == "callejeros":
         frases = frasesCallejeros
-    numero = (randint(0,len(frases)))
+    numero = (randint(0,len(frases) - 1))
+    print "Numero " + str(numero)
     return frases[numero]
  
 bot = telebot.TeleBot(TOKEN) 
